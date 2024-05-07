@@ -43,7 +43,7 @@ Click on “Create Account” to display the following page:
 The login structure we will use in our examples is straightforward. It contains two input fields (username and password), which are both vulnerable. The back-end content creates a query to approve the username and secret key given by the client. Here is an outline of the page rationale:
 
 ($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;).
- For the username put “ganesh” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
+ For the username put “praveen” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
 
 
 ![Screenshot 2023-06-10 223438](https://github.com/praveenst13/sqlinjection/assets/118787793/8ae683e6-f569-42f3-9c38-82bc3f9e6f41)
@@ -55,9 +55,9 @@ Click “Login”. The logged in page will show as below:
 
 ##Bypassing login field
 
-The username field is vulnerable. Put (ganesh’ #) or (ganesh’--) in the username field and hit “Enter” to log in. We use “#” or “--” to comment everything in the query sentence that comes after the username filed telling the database to disregard the password field: (SELECT * FROM users WHERE username=’admin’ # AND password=’ ‘). By using line commenting, the aggressor eliminates a part of the login condition and gains access. This technique will make the “WHERE” clause true only for one user; in this case, it is “ganesh.”
+The username field is vulnerable. Put (praveen’ #) or (praveen’--) in the username field and hit “Enter” to log in. We use “#” or “--” to comment everything in the query sentence that comes after the username filed telling the database to disregard the password field: (SELECT * FROM users WHERE username=’admin’ # AND password=’ ‘). By using line commenting, the aggressor eliminates a part of the login condition and gains access. This technique will make the “WHERE” clause true only for one user; in this case, it is “praveen.”
 
-Now after logging out you will see the login page. In the login page give ganesh’ # . You can see the page now enters into the administrator page as before when giving the password. 
+Now after logging out you will see the login page. In the login page give praveen’ # . You can see the page now enters into the administrator page as before when giving the password. 
 
 ![Screenshot 2023-06-10 223645](https://github.com/praveenst13/sqlinjection/assets/118787793/cb326fd0-509f-4df9-b97d-8a65bf1f0716)
 
