@@ -115,7 +115,7 @@ After adding the order by 6 into the existing url , the following error statemen
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
 As it is having 5 columns the query worked fine and it provides the correct result
 
-![Uploading Screenshot 2024-05-10 180828.png…]()
+![Screenshot 2024-05-10 180828](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/7fb2fba2-5b01-470a-aac2-0264a84d2b63)
 
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5).
