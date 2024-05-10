@@ -120,7 +120,8 @@ As it is having 5 columns the query worked fine and it provides the correct resu
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5).
 
-![](op4.png)
+![image](https://github.com/Vineesh-AI-DS/sqlinjection/assets/93427254/d6d7167c-c337-4f52-9e82-c67ac64c16d7)
+
 
 As given in the screenshot below columns 2,3,4 are usable in which we can substitute any sql commands to extract necessary information.
 
